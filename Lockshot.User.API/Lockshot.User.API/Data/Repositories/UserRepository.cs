@@ -17,5 +17,18 @@ namespace Lockshot.User.API.Data.Repositories
         {
             return await _context.Users.ToListAsync();
         }
+
+
+        public async Task<Lockshot.User.API.Class.User> CreateUserAsync(Lockshot.User.API.Class.User user)
+        {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            return user;
+        }
+
+        public async Task<Lockshot.User.API.Class.User> GetUserByEmailAsync(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        }
     }
 }

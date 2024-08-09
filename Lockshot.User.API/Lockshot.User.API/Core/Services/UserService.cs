@@ -1,6 +1,9 @@
 ﻿using Lockshot.User.API.Class;
 using Lockshot.User.API.Core.Interfaces;
 using Lockshot.User.API.Data.Repositories;
+using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Lockshot.User.API.Core.Services
 {
@@ -16,6 +19,68 @@ namespace Lockshot.User.API.Core.Services
         public async Task<IEnumerable<Lockshot.User.API.Class.User>> GetAllUsersAsync()
         {
             return await _userRepository.GetAllUsersAsync();
+        }
+        public async Task<Lockshot.User.API.Class.User> RegisterAsync(RegisterUserDto registerUserDto)
+        {
+            var salt = GenerateSalt();
+            var passwordHash = HashPassword(registerUserDto.Password, salt);
+
+            var user = new User
+            {
+                Name = registerUserDto.Name,
+                Email = registerUserDto.Email,
+                PasswordHash = passwordHash
+            };
+
+            return await _userRepository.CreateUserAsync(user);
+        }
+
+        public async Task<string> LoginAsync(LoginUserDto loginUserDto)
+        {
+            var user = await _userRepository.GetUserByEmailAsync(loginUserDto.Email);
+            if (user == null || !VerifyPassword(loginUserDto.Password, user.PasswordHash))
+            {
+                throw new UnauthorizedAccessException("Invalid credentials");
+            }
+
+            return "JWT_TOKEN";
+        }
+
+        private string GenerateSalt()
+        {
+            byte[] salt = new byte[128 / 8];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(salt);
+            }
+            return Convert.ToBase64String(salt);
+        }
+
+        private string HashPassword(string password, string salt)
+        {
+            string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: password,
+                salt: Encoding.UTF8.GetBytes(salt),
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 10000,
+                numBytesRequested: 256 / 8));
+
+            return $"{salt}:{hashed}";
+        }
+
+        private bool VerifyPassword(string password, string storedHash)
+        {
+            var parts = storedHash.Split(':');
+            if (parts.Length != 2)
+            {
+                return false;
+            }
+
+            var salt = parts[0];
+            var hash = parts[1];
+            var computedHash = HashPassword(password, salt);
+
+            return storedHash == computedHash;
         }
     }
 }

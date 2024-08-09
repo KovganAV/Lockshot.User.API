@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lockshot.User.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d436575a6804b0c140a26181444560801b81ed8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dd7d9f2212553e6df3e3df098c3bbfa11cc8fc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lockshot.User.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lockshot.User.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
