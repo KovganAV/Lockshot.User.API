@@ -1,6 +1,0 @@
-@Lockshot.User.API_HostAddress = http://localhost:5277
-
-GET {{Lockshot.User.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
