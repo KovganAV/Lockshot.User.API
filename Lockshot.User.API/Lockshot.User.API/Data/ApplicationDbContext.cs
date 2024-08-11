@@ -9,5 +9,7 @@ namespace Lockshot.User.API.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Lockshot.User.API.Class.User> Users { get; set; }
+
+        public DbSet<Hit> Hits { get; set; }
     }
 }

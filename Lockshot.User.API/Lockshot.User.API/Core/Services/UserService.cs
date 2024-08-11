@@ -24,8 +24,7 @@ namespace Lockshot.User.API.Core.Services
         {
             var salt = GenerateSalt();
             var passwordHash = HashPassword(registerUserDto.Password, salt);
-
-            var user = new User
+            var user = new Lockshot.User.API.Class.User
             {
                 Name = registerUserDto.Name,
                 Email = registerUserDto.Email,
