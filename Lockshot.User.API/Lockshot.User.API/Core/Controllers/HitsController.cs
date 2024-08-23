@@ -1,4 +1,4 @@
-﻿using Lockshot.User.API.Class;
+﻿using Lockshot.User.API.Core.DTOs;
 using Lockshot.User.API.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,4 +1,5 @@
 ﻿using Lockshot.User.API.Class;
+using Lockshot.User.API.Core.DTOs;
 using Lockshot.User.API.Core.Interfaces;
 using Lockshot.User.API.Data.Interfaces;
 
@@ -20,6 +21,7 @@ namespace Lockshot.User.API.Core.Services
                 UserId = hitDto.UserId,
                 WeaponType = hitDto.WeaponType,
                 Score = hitDto.Score,
+                Distance = hitDto.Distance, 
                 Timestamp = DateTime.UtcNow
             };
 
@@ -33,7 +35,8 @@ namespace Lockshot.User.API.Core.Services
             {
                 UserId = hit.UserId,
                 WeaponType = hit.WeaponType,
-                Score = hit.Score
+                Score = hit.Score,
+                Distance = hit.Distance 
             });
         }
     }

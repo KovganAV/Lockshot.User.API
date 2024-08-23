@@ -26,6 +26,11 @@ namespace Lockshot.User.API.Data.Repositories
             return user;
         }
 
+        public async Task<Lockshot.User.API.Class.User> GetUserByNameAsync(string name)  
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Name == name);
+        }
+
         public async Task<Lockshot.User.API.Class.User> GetUserByEmailAsync(string email)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);

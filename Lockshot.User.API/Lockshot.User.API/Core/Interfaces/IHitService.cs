@@ -1,4 +1,6 @@
-﻿using Lockshot.User.API.Class;
+﻿using Lockshot.User.API.Core.DTOs;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Lockshot.User.API.Core.Interfaces
 {

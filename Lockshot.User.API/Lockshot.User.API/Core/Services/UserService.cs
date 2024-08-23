@@ -20,6 +20,12 @@ namespace Lockshot.User.API.Core.Services
         {
             return await _userRepository.GetAllUsersAsync();
         }
+
+
+        public async Task<User> GetUserByNameAsync(string name)  
+        {
+            return await _userRepository.GetUserByNameAsync(name);
+        }
         public async Task<Lockshot.User.API.Class.User> RegisterAsync(RegisterUserDto registerUserDto)
         {
             var salt = GenerateSalt();
