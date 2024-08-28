@@ -22,7 +22,7 @@ namespace Lockshot.User.API.Core.Services
         }
 
 
-        public async Task<User> GetUserByNameAsync(string name)  
+        public async Task<Lockshot.User.API.Class.User> GetUserByNameAsync(string name)  
         {
             return await _userRepository.GetUserByNameAsync(name);
         }

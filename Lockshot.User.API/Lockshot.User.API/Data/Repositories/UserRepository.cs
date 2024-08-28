@@ -13,6 +13,11 @@ namespace Lockshot.User.API.Data.Repositories
             _context = context;
         }
 
+        public async Task<Lockshot.User.API.Class.User> GetUserByNameAsync(string name)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Name == name);
+        }
+
         public async Task<IEnumerable<Lockshot.User.API.Class.User>> GetAllUsersAsync()
         {
             return await _context.Users.ToListAsync();
@@ -24,11 +29,6 @@ namespace Lockshot.User.API.Data.Repositories
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return user;
-        }
-
-        public async Task<Lockshot.User.API.Class.User> GetUserByNameAsync(string name)  
-        {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Name == name);
         }
 
         public async Task<Lockshot.User.API.Class.User> GetUserByEmailAsync(string email)
