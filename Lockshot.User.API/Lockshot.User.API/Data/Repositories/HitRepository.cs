@@ -1,6 +1,9 @@
 ﻿using Lockshot.User.API.Class;
 using Lockshot.User.API.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Lockshot.User.API.Data.Repositories
 {
@@ -19,9 +22,21 @@ namespace Lockshot.User.API.Data.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Hit>> GetHitsByUserAsync(int userId)
+        public async Task<IEnumerable<Hit>> GetHitsByUserAsync(int userId, bool sortDescending = false) 
         {
-            return await _context.Hits.Where(h => h.UserId == userId).ToListAsync();
+            var query = _context.Hits.Where(h => h.UserId == userId);
+
+           
+            if (sortDescending)
+            {
+                query = query.OrderByDescending(h => h.Score); 
+            }
+            else
+            {
+                query = query.OrderBy(h => h.Score); 
+            }
+
+            return await query.ToListAsync();
         }
     }
 }
