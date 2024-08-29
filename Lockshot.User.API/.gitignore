@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,aspnetcore
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,csharp,aspnetcore
+# Created by https://www.toptal.com/developers/gitignore/api/vs,csharp,aspnetcore
+# Edit at https://www.toptal.com/developers/gitignore?templates=vs,csharp,aspnetcore
 
 ### ASPNETCore ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -523,7 +523,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 
-### VisualStudio ###
+### vs ###
+## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
 
@@ -547,8 +548,6 @@ FodyWeavers.xsd
 # Benchmark Results
 
 # .NET Core
-
-# ASP.NET Scaffolding
 
 # StyleCop
 
@@ -575,6 +574,7 @@ FodyWeavers.xsd
 # AxoCover is a Code Coverage Tool
 
 # Coverlet is a free, cross platform Code Coverage Tool
+coverage*[.json, .xml, .info]
 
 # Visual Studio code coverage results
 
@@ -645,12 +645,6 @@ FodyWeavers.xsd
 
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
 
-# Visual Studio 6 auto-generated project file (contains which files were open etc.)
-
-# Visual Studio 6 workspace and project file (working project files containing files to include in project)
-
-# Visual Studio 6 technical files
-
 # Visual Studio LightSwitch build output
 
 # Paket dependency manager
@@ -683,25 +677,10 @@ FodyWeavers.xsd
 
 # Local History for Visual Studio
 
-# Visual Studio History (VSHistory) files
-
 # BeatPulse healthcheck temp database
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
 # Ionide (cross platform F# VS Code tools) working folder
 
-# Fody - auto-generated XML schema
-
-# VS Code files for those working on multiple tools
-
-# Local History for Visual Studio Code
-
-# Windows Installer files from build outputs
-
-# JetBrains Rider
-
-### VisualStudio Patch ###
-# Additional files built by Visual Studio
-
-# End of https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,aspnetcore
+# End of https://www.toptal.com/developers/gitignore/api/vs,csharp,aspnetcore

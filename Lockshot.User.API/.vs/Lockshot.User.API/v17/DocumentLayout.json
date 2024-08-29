@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "D:\\Lockshot-\\Lockshot.User.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\data\\interfaces\\ihitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\data\\interfaces\\ihitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\interfaces\\ihitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\interfaces\\ihitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\data\\repositories\\hitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\data\\repositories\\hitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\services\\hitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\services\\hitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\controllers\\hitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\controllers\\hitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\interfaces\\ihitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\interfaces\\ihitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\data\\interfaces\\ihitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\data\\interfaces\\ihitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\data\\repositories\\hitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\data\\repositories\\hitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\core\\controllers\\hitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\core\\controllers\\hitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|solutionrelative:lockshot.user.api\\data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA00E88D-42C0-4D14-99B4-017DB9F2EC47}|Lockshot.User.API\\Lockshot.User.API.csproj|d:\\lockshot-\\lockshot.user.api\\lockshot.user.api\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "HitsController.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Controllers\\HitsController.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Core\\Controllers\\HitsController.cs",
@@ -86,38 +86,37 @@
               "RelativeToolTip": "Lockshot.User.API\\Core\\Controllers\\HitsController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAUwBMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:31:22.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:31:22.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Core\\Services\\UserService.cs",
               "ToolTip": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Services\\UserService.cs",
               "RelativeToolTip": "Lockshot.User.API\\Core\\Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T12:31:19.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "HitService.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Services\\HitService.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Core\\Services\\HitService.cs",
               "ToolTip": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Services\\HitService.cs",
               "RelativeToolTip": "Lockshot.User.API\\Core\\Services\\HitService.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowCUAAAAwAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowB8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T12:31:19.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "IHitService.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Interfaces\\IHitService.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Core\\Interfaces\\IHitService.cs",
@@ -130,13 +129,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Core\\Interfaces\\IUserService.cs",
               "ToolTip": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Core\\Interfaces\\IUserService.cs",
               "RelativeToolTip": "Lockshot.User.API\\Core\\Interfaces\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T12:15:04.4Z",
               "EditorCaption": ""
@@ -151,8 +150,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Class\\RegisterUserDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:15:00.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:15:00.512Z"
             },
             {
               "$type": "Document",
@@ -164,8 +162,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Class\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:14:59.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:14:59.836Z"
             },
             {
               "$type": "Document",
@@ -177,12 +174,11 @@
               "RelativeToolTip": "Lockshot.User.API\\Data\\Repositories\\UserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:15:09.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:15:09.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Data\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Data\\Interfaces\\IUserRepository.cs",
@@ -190,12 +186,11 @@
               "RelativeToolTip": "Lockshot.User.API\\Data\\Interfaces\\IUserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:15:08.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:15:08.592Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "IHitRepository.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Data\\Interfaces\\IHitRepository.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Data\\Interfaces\\IHitRepository.cs",
@@ -203,12 +198,11 @@
               "RelativeToolTip": "Lockshot.User.API\\Data\\Interfaces\\IHitRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:15:08.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:15:08.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "HitRepository.cs",
               "DocumentMoniker": "D:\\Lockshot-\\Lockshot.User.API\\Lockshot.User.API\\Data\\Repositories\\HitRepository.cs",
               "RelativeDocumentMoniker": "Lockshot.User.API\\Data\\Repositories\\HitRepository.cs",
@@ -216,8 +210,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Data\\Repositories\\HitRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:15:10.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:15:10.269Z"
             },
             {
               "$type": "Document",
@@ -229,8 +222,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:31:26.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:31:26.593Z"
             },
             {
               "$type": "Document",
@@ -242,8 +234,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Core\\Controllers\\UsersController.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAswB8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:30:51.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:30:51.529Z"
             },
             {
               "$type": "Document",
@@ -255,8 +246,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Class\\LoginUserDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:14:59.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:14:59.216Z"
             },
             {
               "$type": "Document",
@@ -268,8 +258,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Class\\Hit.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:14:58.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:14:58.637Z"
             },
             {
               "$type": "Document",
@@ -281,8 +270,7 @@
               "RelativeToolTip": "Lockshot.User.API\\Class\\HitDTOs.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T12:14:58.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T12:14:58.086Z"
             }
           ]
         }
