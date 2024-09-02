@@ -18,6 +18,12 @@ namespace Lockshot.User.API.Data.Repositories
             return await _context.Users.FirstOrDefaultAsync(u => u.Name == name);
         }
 
+
+        public async Task<Lockshot.User.API.Class.User> GetUserByIdAsync(int Id)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == Id);
+        }
+
         public async Task<IEnumerable<Lockshot.User.API.Class.User>> GetAllUsersAsync()
         {
             return await _context.Users.ToListAsync();

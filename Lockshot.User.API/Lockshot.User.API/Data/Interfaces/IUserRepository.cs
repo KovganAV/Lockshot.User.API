@@ -8,6 +8,7 @@ namespace Lockshot.User.API.Core.Interfaces
     {
         Task<IEnumerable<Lockshot.User.API.Class.User>> GetAllUsersAsync();
         Task<Lockshot.User.API.Class.User> GetUserByNameAsync(string name);
+        Task<Lockshot.User.API.Class.User> GetUserByIdAsync(int Id);
         Task<Lockshot.User.API.Class.User> CreateUserAsync(Lockshot.User.API.Class.User user);
         Task<Lockshot.User.API.Class.User> GetUserByEmailAsync(string email);
     }

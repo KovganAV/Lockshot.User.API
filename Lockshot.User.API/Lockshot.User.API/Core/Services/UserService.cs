@@ -40,6 +40,11 @@ namespace Lockshot.User.API.Core.Services
             return await _userRepository.CreateUserAsync(user);
         }
 
+        public async Task<Lockshot.User.API.Class.User> GetUserByIdAsync(int Id)
+        {
+            return await _userRepository.GetUserByIdAsync(Id);
+        }
+
         public async Task<string> LoginAsync(LoginUserDto loginUserDto)
         {
             var user = await _userRepository.GetUserByEmailAsync(loginUserDto.Email);

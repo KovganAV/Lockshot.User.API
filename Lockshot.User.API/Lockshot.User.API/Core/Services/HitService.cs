@@ -28,11 +28,11 @@ namespace Lockshot.User.API.Core.Services
                 Distance = hitDto.Distance,
                 Timestamp = DateTime.UtcNow
             };
-
+            
             await _hitRepository.SaveHitAsync(hit);
         }
 
-        public async Task<IEnumerable<HitDto>> GetHitsByUserAsync(int userId, bool sortDescending = false) 
+        public async Task<IEnumerable<HitDto>> GetHitsByUserAsync(int userId, bool sortDescending = false)
         {
             var hits = await _hitRepository.GetHitsByUserAsync(userId, sortDescending);
             return hits.Select(hit => new HitDto
@@ -40,8 +40,10 @@ namespace Lockshot.User.API.Core.Services
                 UserId = hit.UserId,
                 WeaponType = hit.WeaponType,
                 Score = hit.Score,
-                Distance = hit.Distance
+                Distance = hit.Distance,
+                Metrics = hit.Metrics
             });
         }
+
     }
 }

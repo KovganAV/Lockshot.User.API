@@ -23,7 +23,7 @@ namespace Lockshot.User.API.Core.Controllers
         }
 
         [HttpGet("{name}")]
-        public async Task<IActionResult> GetUserByName(string name) // Новая конечная точка
+        public async Task<IActionResult> GetUserByName(string name) 
         {
             var user = await _userService.GetUserByNameAsync(name);
             if (user == null)
@@ -32,6 +32,18 @@ namespace Lockshot.User.API.Core.Controllers
             }
             return Ok(user);
         }
+
+ /*       [HttpGet("{Id}")]
+        public async Task<IActionResult> GetUserById(int Id)
+        {
+            var Id = await _userService.GetUserByIdAsync(Id);
+            if (Id == null)
+            {
+                return NotFound("User not found.");
+            }
+            return Ok(Id);
+        }
+ */
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterUserDto registerUserDto)
