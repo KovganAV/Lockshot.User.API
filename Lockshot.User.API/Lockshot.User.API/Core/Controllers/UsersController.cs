@@ -33,7 +33,7 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(user);
         }
 
- /*       [HttpGet("{Id}")]
+        [HttpGet("{Id}")]
         public async Task<IActionResult> GetUserById(int Id)
         {
             var Id = await _userService.GetUserByIdAsync(Id);
@@ -43,7 +43,7 @@ namespace Lockshot.User.API.Core.Controllers
             }
             return Ok(Id);
         }
- */
+ 
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterUserDto registerUserDto)
