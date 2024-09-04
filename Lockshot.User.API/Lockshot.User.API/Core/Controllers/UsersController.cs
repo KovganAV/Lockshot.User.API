@@ -33,17 +33,16 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(user);
         }
 
-        [HttpGet("{Id}")]
-        public async Task<IActionResult> GetUserById(int Id)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUserById(int id)
         {
-            var Id = await _userService.GetUserByIdAsync(Id);
-            if (Id == null)
+            var user = await _userService.GetUserByIdAsync(id);
+            if (user == null)
             {
                 return NotFound("User not found.");
             }
-            return Ok(Id);
+            return Ok(user);
         }
- 
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterUserDto registerUserDto)
