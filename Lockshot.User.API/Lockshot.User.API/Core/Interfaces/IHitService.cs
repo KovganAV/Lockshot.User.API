@@ -8,6 +8,8 @@ namespace Lockshot.User.API.Core.Interfaces
     public interface IHitService
     {
         Task SaveHitAsync(HitDto hitDto);
-        Task<IEnumerable<HitDto>> GetHitsByUserAsync(int userId, bool sortDescending = false);
+        Task<IEnumerable<HitDto>> GetMostHits(int userId, double distance);
+        Task<IEnumerable<HitDto>> GetMostHitsByMetrics(int userId, double Metrics);
+        Task<IEnumerable<HitDto>> GetMostHitsScore(string userId, int Score);
     }
 }

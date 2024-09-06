@@ -32,18 +32,55 @@ namespace Lockshot.User.API.Core.Services
             await _hitRepository.SaveHitAsync(hit);
         }
 
-        public async Task<IEnumerable<HitDto>> GetHitsByUserAsync(int userId, bool sortDescending = false)
+        public async Task<IEnumerable<HitDto>> GetMostHitsByMetrics(int userId, double distance)
         {
-            var hits = await _hitRepository.GetHitsByUserAsync(userId, sortDescending);
-            return hits.Select(hit => new HitDto
-            {
-                UserId = hit.UserId,
-                WeaponType = hit.WeaponType,
-                Score = hit.Score,
-                Distance = hit.Distance,
-                Metrics = hit.Metrics
-            });
+            var hits = await _hitRepository.GetHits(userId, distance);
+
+            return hits
+                .OrderByDescending(hit => hit.Metrics) 
+                .Select(hit => new HitDto
+                {
+                    Id = hit.Id,
+                    WeaponType = hit.WeaponType,
+                    Score = hit.Score,
+                    Timestamp = hit.Timestamp,
+                    Distance = hit.Distance,
+                    Metrics = hit.Metrics
+                });
         }
 
+        public async Task<IEnumerable<HitDto>> GetMostHits(int userId, double distance)
+        {
+            var hits = await _hitRepository.GetHits(userId, distance);
+
+            return hits
+                .OrderByDescending(hit => hit.Score)
+                .Select(hit => new HitDto
+                {
+                    Id = hit.Id,
+                    WeaponType = hit.WeaponType,
+                    Score = hit.Score,
+                    Timestamp = hit.Timestamp,
+                    Distance = hit.Distance,
+                    Metrics = hit.Metrics
+                });
+        }
+
+        public async Task<IEnumerable<HitDto>> GetMostHitsScore(int userId, int Score)
+        {
+            var hits = await _hitRepository.GetHits(userId, Score);
+
+            return hits
+                .OrderByDescending(hit => hit.Score)
+                .Select(hit => new HitDto
+                {
+                    Id = hit.Id,
+                    WeaponType = hit.WeaponType,
+                    Score = hit.Score,
+                    Timestamp = hit.Timestamp,
+                    Distance = hit.Distance,
+                    Metrics = hit.Metrics
+                });
+        }
     }
 }

@@ -7,6 +7,7 @@ namespace Lockshot.User.API.Data.Interfaces
     public interface IHitRepository
     {
         Task SaveHitAsync(Hit hit);
-        Task<IEnumerable<Hit>> GetHitsByUserAsync(int userId, bool sortDescending = false); 
+        Task<IEnumerable<Hit>> GetHitsByUserAsync(int userId, bool sortDescending = false);
+        Task<IEnumerable<Hit>> GetHits(int userId, double distance);
     }
 }
