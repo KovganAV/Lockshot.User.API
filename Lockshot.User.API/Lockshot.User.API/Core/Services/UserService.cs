@@ -35,7 +35,8 @@ namespace Lockshot.User.API.Core.Services
             {
                 Name = registerUserDto.Name,
                 Email = registerUserDto.Email,
-                PasswordHash = passwordHash
+                PasswordHash = passwordHash,
+                Role = registerUserDto.Role
             };
 
             return await _userRepository.CreateUserAsync(user);

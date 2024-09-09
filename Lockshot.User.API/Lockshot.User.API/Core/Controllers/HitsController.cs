@@ -22,6 +22,19 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok();
         }
 
+        [HttpGet("{userId}/all")]
+        public async Task<IActionResult> GetAllHits(int userId)
+        {
+            var hits = await _hitService.GetAllHits(userId);
+
+            if (hits == null || !hits.Any())
+            {
+                return NotFound("No hits found for the specified user and distance.");
+            }
+
+            return Ok(hits);
+        }
+
         [HttpGet("{userId}/{Distance}/distance")]
         public async Task<IActionResult> GetMostHitsByDistance(int userId, double Distance)
         {

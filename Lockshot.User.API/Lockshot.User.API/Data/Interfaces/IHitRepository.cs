@@ -9,5 +9,6 @@ namespace Lockshot.User.API.Data.Interfaces
         Task SaveHitAsync(Hit hit);
         Task<IEnumerable<Hit>> GetHitsByUserAsync(int userId, bool sortDescending = false);
         Task<IEnumerable<Hit>> GetHits(int userId, double distance);
+        Task<IEnumerable<Hit>> GetAllHits(int userId);
     }
 }

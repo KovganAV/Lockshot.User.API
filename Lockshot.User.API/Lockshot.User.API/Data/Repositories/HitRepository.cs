@@ -46,5 +46,11 @@ namespace Lockshot.User.API.Data.Repositories
                 .ToListAsync();
         }
 
+        public async Task<IEnumerable<Hit>> GetAllHits(int userId)
+        {
+            return await _context.Hits
+                .Where(hit => hit.UserId == userId)
+                .ToListAsync();
+        }
     }
 }
