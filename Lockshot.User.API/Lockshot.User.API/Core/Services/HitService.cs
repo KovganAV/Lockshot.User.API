@@ -32,9 +32,9 @@ namespace Lockshot.User.API.Core.Services
             await _hitRepository.SaveHitAsync(hit);
         }
 
-        public async Task<IEnumerable<HitDto>> GetMostHitsByMetrics(int userId, double distance)
+        public async Task<IEnumerable<HitDto>> GetMostHitsByMetrics(int userId, double Distance)
         {
-            var hits = await _hitRepository.GetHits(userId, distance);
+            var hits = await _hitRepository.GetHits(userId, Distance);
 
             return hits
                 .OrderByDescending(hit => hit.Metrics) 
@@ -49,9 +49,9 @@ namespace Lockshot.User.API.Core.Services
                 });
         }
 
-        public async Task<IEnumerable<HitDto>> GetMostHits(int userId, double distance)
+        public async Task<IEnumerable<HitDto>> GetMostByDistance(int userId, double Distance)
         {
-            var hits = await _hitRepository.GetHits(userId, distance);
+            var hits = await _hitRepository.GetHits(userId, Distance);
 
             return hits
                 .OrderByDescending(hit => hit.Score)
@@ -65,8 +65,7 @@ namespace Lockshot.User.API.Core.Services
                     Metrics = hit.Metrics
                 });
         }
-
-        public async Task<IEnumerable<HitDto>> GetMostHitsScore(int userId, int Score)
+        public async Task<IEnumerable<HitDto>> GetMostHitsByScore(int userId, int Score)
         {
             var hits = await _hitRepository.GetHits(userId, Score);
 
@@ -81,6 +80,21 @@ namespace Lockshot.User.API.Core.Services
                     Distance = hit.Distance,
                     Metrics = hit.Metrics
                 });
+        }
+
+        public Task<IEnumerable<HitDto>> GetMostHits(int userId, double Distance)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<HitDto>> GetMostHitsByScore(string userId, int Score)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task GetMostHitsByScore(int userId, double score)
+        {
+            throw new NotImplementedException();
         }
     }
 }

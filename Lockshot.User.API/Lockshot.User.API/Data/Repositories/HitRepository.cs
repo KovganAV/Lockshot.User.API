@@ -46,11 +46,5 @@ namespace Lockshot.User.API.Data.Repositories
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Hit>> GetHits(int userId, double distance)
-        {
-            return await _context.Hits
-                .Where(hit => hit.UserId == userId && hit.Distance == distance)
-                .ToListAsync();
-        }
     }
 }
