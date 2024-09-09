@@ -22,10 +22,10 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok();
         }
 
-        [HttpGet("{userId}/{distance}")]
+        [HttpGet("{userId}/{Distance}/distance")]
         public async Task<IActionResult> GetMostHitsByDistance(int userId, double Distance)
         {
-            var hits = await _hitService.GetMostHits(userId, Distance);
+            var hits = await _hitService.GetMostByDistance(userId, Distance);
 
             if (hits == null || !hits.Any())
             {
@@ -49,8 +49,8 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(hits);
         }
 
-        [HttpGet("{userId}/{Score}/Score")]
-        public async Task<IActionResult> GetMostHitsByScore(string userId, int Score)
+        [HttpGet("{userId}/{Score}/score")]
+        public async Task<IActionResult> GetMostHitsByScore(int userId, int Score)
         {
             var hits = await _hitService.GetMostHitsByScore(userId, Score);
 

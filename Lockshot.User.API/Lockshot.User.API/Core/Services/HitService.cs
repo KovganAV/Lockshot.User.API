@@ -32,9 +32,9 @@ namespace Lockshot.User.API.Core.Services
             await _hitRepository.SaveHitAsync(hit);
         }
 
-        public async Task<IEnumerable<HitDto>> GetMostHitsByMetrics(int userId, double Distance)
+        public async Task<IEnumerable<HitDto>> GetMostHitsByMetrics(int userId, double Metrics)
         {
-            var hits = await _hitRepository.GetHits(userId, Distance);
+            var hits = await _hitRepository.GetHits(userId, Metrics);
 
             return hits
                 .OrderByDescending(hit => hit.Metrics) 
@@ -80,21 +80,6 @@ namespace Lockshot.User.API.Core.Services
                     Distance = hit.Distance,
                     Metrics = hit.Metrics
                 });
-        }
-
-        public Task<IEnumerable<HitDto>> GetMostHits(int userId, double Distance)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<HitDto>> GetMostHitsByScore(string userId, int Score)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task GetMostHitsByScore(int userId, double score)
-        {
-            throw new NotImplementedException();
         }
     }
 }
