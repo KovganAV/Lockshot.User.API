@@ -22,18 +22,18 @@ namespace Lockshot.User.API.Data.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Hit>> GetHitsByUserAsync(int userId, bool sortDescending = false) 
+        public async Task<IEnumerable<Hit>> GetHitsByUserAsync(int userId, bool sortDescending = false)
         {
             var query = _context.Hits.Where(h => h.UserId == userId);
 
-           
+
             if (sortDescending)
             {
-                query = query.OrderByDescending(h => h.Score); 
+                query = query.OrderByDescending(h => h.Score);
             }
             else
             {
-                query = query.OrderBy(h => h.Score); 
+                query = query.OrderBy(h => h.Score);
             }
 
             return await query.ToListAsync();
@@ -52,5 +52,13 @@ namespace Lockshot.User.API.Data.Repositories
                 .Where(hit => hit.UserId == userId)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<Hit>> GetHitsByWeaponType(int userId, string WeaponType)
+        {
+            return await _context.Hits
+                .Where(hit => hit.UserId == userId && WeaponType == WeaponType)
+                .ToListAsync();
+        }
     }
 }
+

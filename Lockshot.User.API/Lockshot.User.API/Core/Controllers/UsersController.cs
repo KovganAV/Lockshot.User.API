@@ -22,17 +22,6 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(users);
         }
 
-        [HttpGet("{name}")]
-        public async Task<IActionResult> GetUserByName(string name) 
-        {
-            var user = await _userService.GetUserByNameAsync(name);
-            if (user == null)
-            {
-                return NotFound("User not found.");
-            }
-            return Ok(user);
-        }
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
@@ -42,6 +31,29 @@ namespace Lockshot.User.API.Core.Controllers
                 return NotFound("User not found.");
             }
             return Ok(user);
+        }
+
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetUserByName(string Name) 
+        {
+            var user = await _userService.GetUserByNameAsync(Name);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+            return Ok(user);
+        }
+
+
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetUserByEmailAsync(string Email)
+        {
+            var Email = await _userService.GetUserByEmailAsync(Email);
+            if (Email == null)
+            {
+                return NotFound("User not found.");
+            }
+            return Ok(Email);
         }
 
         [HttpPost]

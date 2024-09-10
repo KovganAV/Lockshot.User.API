@@ -81,6 +81,24 @@ namespace Lockshot.User.API.Core.Services
                     Metrics = hit.Metrics
                 });
         }
+
+        public async Task<IEnumerable<HitDto>> GetHitsByWeaponType(int userId, string WeaponType)
+        {
+            var hits = await _hitRepository.GetHitsByWeaponType(userId, WeaponType);
+
+            return hits
+                .OrderByDescending(hit => hit.WeaponType)
+                .Select(hit => new HitDto
+                {
+                    Id = hit.Id,
+                    WeaponType = hit.WeaponType,
+                    Score = hit.Score,
+                    Timestamp = hit.Timestamp,
+                    Distance = hit.Distance,
+                    Metrics = hit.Metrics
+                });
+        }
+
         public async Task<IEnumerable<HitDto>> GetAllHits(int userId)
         {
             var hits = await _hitRepository.GetAllHits(userId);

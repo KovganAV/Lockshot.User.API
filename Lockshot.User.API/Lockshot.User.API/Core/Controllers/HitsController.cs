@@ -74,5 +74,19 @@ namespace Lockshot.User.API.Core.Controllers
 
             return Ok(hits);
         }
+
+
+        [HttpGet("{userId}/{WeaponType}/weapon type")]
+        public async Task<IActionResult> GetHitsByWeaponType(int userId, string WeaponType)
+        {
+            var hits = await _hitService.GetHitsByWeaponType(userId, WeaponType);
+
+            if (hits == null || !hits.Any())
+            {
+                return NotFound("No hits found for the specified user and Weapon Type.");
+            }
+
+            return Ok(hits);
+        }
     }
 }

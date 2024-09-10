@@ -22,9 +22,9 @@ namespace Lockshot.User.API.Core.Services
         }
 
 
-        public async Task<Lockshot.User.API.Class.User> GetUserByNameAsync(string name)  
+        public async Task<Lockshot.User.API.Class.User> GetUserByNameAsync(string Name)  
         {
-            return await _userRepository.GetUserByNameAsync(name);
+            return await _userRepository.GetUserByNameAsync(Name);
         }
 
         public async Task<Lockshot.User.API.Class.User> RegisterAsync(RegisterUserDto registerUserDto)
@@ -56,6 +56,13 @@ namespace Lockshot.User.API.Core.Services
             }
 
             return "JWT_TOKEN";
+        }
+
+        public async Task<Lockshot.User.API.Class.User> GetUserByEmailAsync(string Email)
+        {
+            {
+                return await _userRepository.GetUserByEmailAsync(Email);
+            }
         }
 
         private string GenerateSalt()
