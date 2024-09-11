@@ -11,5 +11,7 @@ namespace Lockshot.User.API.Data
         public DbSet<Lockshot.User.API.Class.User> Users { get; set; }
 
         public DbSet<Hit> Hits { get; set; }
+
+        public DbSet<Gun> Guns { get; set; }
     }
 }

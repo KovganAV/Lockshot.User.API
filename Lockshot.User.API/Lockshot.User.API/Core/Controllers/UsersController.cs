@@ -48,12 +48,12 @@ namespace Lockshot.User.API.Core.Controllers
         [HttpGet("{email}")]
         public async Task<IActionResult> GetUserByEmailAsync(string Email)
         {
-            var Email = await _userService.GetUserByEmailAsync(Email);
-            if (Email == null)
+            var email = await _userService.GetUserByEmailAsync(Email);
+            if (email == null)
             {
                 return NotFound("User not found.");
             }
-            return Ok(Email);
+            return Ok(email);
         }
 
         [HttpPost]
