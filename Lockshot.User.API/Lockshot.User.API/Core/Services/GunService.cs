@@ -19,10 +19,10 @@ namespace Lockshot.User.API.Core.Services
             _gunRepository = gunRepository;
         }
 
-        //public async Task<IEnumerable<Gun>> GetAllGunsAsync(int userId)
-        //{
-        //    return await _gunRepository.GetAllGunsAsync(userId);
-        //}
+        public async Task<IEnumerable<Gun>> GetAllGunsAsync(int userId)
+        {
+            return await _gunRepository.GetAllGunsAsync(userId);
+        }
 
         public async Task<IEnumerable<Gun>> GetMostGunByCalibre(int userId, string Calibre)
         {
@@ -132,11 +132,6 @@ namespace Lockshot.User.API.Core.Services
                     FiringMode = Gun.FiringMode,
                     Calibre = Gun.Calibre
                 });
-        }
-
-        public Task<IEnumerable<Gun>> GetAllGunsAsync(int userId)
-        {
-            throw new NotImplementedException();
         }
     }
 }

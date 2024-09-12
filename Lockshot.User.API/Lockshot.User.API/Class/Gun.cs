@@ -3,7 +3,7 @@
     public class Gun
     {
         public int Id { get; set; }
-        public string UserId { get; set; }
+        public int UserId { get; set; }
         public string NameGun { get; set; }
         public string WeaponType { get; set; }
         public double MaxDistance { get; set; }

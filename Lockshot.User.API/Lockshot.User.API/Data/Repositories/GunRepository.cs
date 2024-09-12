@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Lockshot.User.API.Data.Repositories
 {
@@ -17,47 +20,49 @@ namespace Lockshot.User.API.Data.Repositories
         }
         public async Task<IEnumerable<Gun>> GetAllGunsAsync(int UserId)
         {
+        
             return await _context.Guns
                 .Where(gun => gun.UserId == UserId)
-                .ToListAsync(); 
+                .ToListAsync();
+        
         }
 
-        async Task<IEnumerable<Gun>> GetMostGunByCalibre(int userId, string Calibre)
+        public async Task<IEnumerable<Gun>> GetMostGunByCalibre(int userId, string Calibre)
         {
             return await _context.Guns
                 .Where(gun => gun.Calibre == Calibre)
                 .ToListAsync();
         }
 
-        async Task<IEnumerable<Gun>> GetMostGunByNameGun(int userId, string NameGun)
+        public async Task<IEnumerable<Gun>> GetMostGunByNameGun(int userId, string NameGun)
         {
             return await _context.Guns
                 .Where(gun => gun.NameGun == NameGun)
                 .ToListAsync();
         }
 
-        async Task<IEnumerable<Gun>> GetMostGunById(int userId, int Id)
+        public async Task<IEnumerable<Gun>> GetMostGunById(int userId, int Id)
         {
             return await _context.Guns
                 .Where(gun => gun.Id == Id)
                 .ToListAsync();
         }
 
-        async Task<IEnumerable<Gun>> GetMostGunByWeaponType(int userId, string WeaponType)
+        public async Task<IEnumerable<Gun>> GetMostGunByWeaponType(int userId, string WeaponType)
         {
             return await _context.Guns
                 .Where(gun => gun.WeaponType == WeaponType)
                 .ToListAsync();
         }
 
-        async Task<IEnumerable<Gun>> GetMostGunByFiringMode(int userId, string FiringMode)
+        public async Task<IEnumerable<Gun>> GetMostGunByFiringMode(int userId, string FiringMode)
         {
             return await _context.Guns
                 .Where(gun => gun.FiringMode == FiringMode)
                 .ToListAsync();
         }
 
-        async Task<IEnumerable<Gun>> GetMostGunByBulets(int userId, int Bulets)
+        public async Task<IEnumerable<Gun>> GetMostGunByBulets(int userId, int Bulets)
         {
             return await _context.Guns
                 .Where(gun => gun.Bulets == Bulets)
