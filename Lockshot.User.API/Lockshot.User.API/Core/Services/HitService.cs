@@ -34,7 +34,7 @@ namespace Lockshot.User.API.Core.Services
 
         public async Task<IEnumerable<HitDto>> GetMostHitsByMetrics(int userId, double Metrics)
         {
-            var hits = await _hitRepository.GetHits(userId, Metrics);
+            var hits = await _hitRepository.GetHitsByMetrics(userId, Metrics);
 
             return hits
                 .OrderByDescending(hit => hit.Metrics) 
@@ -51,7 +51,7 @@ namespace Lockshot.User.API.Core.Services
 
         public async Task<IEnumerable<HitDto>> GetMostByDistance(int userId, double Distance)
         {
-            var hits = await _hitRepository.GetHits(userId, Distance);
+            var hits = await _hitRepository.GetHitsByDistance(userId, Distance);
 
             return hits
                 .OrderByDescending(hit => hit.Score)
@@ -67,7 +67,7 @@ namespace Lockshot.User.API.Core.Services
         }
         public async Task<IEnumerable<HitDto>> GetMostHitsByScore(int userId, int Score)
         {
-            var hits = await _hitRepository.GetHits(userId, Score);
+            var hits = await _hitRepository.GetHitsByScore(userId, Score);
 
             return hits
                 .OrderByDescending(hit => hit.Score)

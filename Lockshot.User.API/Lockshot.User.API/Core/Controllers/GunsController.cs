@@ -83,7 +83,7 @@ namespace Lockshot.User.API.Core.Controllers
         [HttpGet("{userId}/{FiringMode}/miring mode")]
         public async Task<IEnumerable<Gun>> GetMostGunByFiringMode(int userId, string FiringMode)
         {
-            var guns = await _gunService.GetMostGunByWeaponType(userId, FiringMode);
+            var guns = await _gunService.GetMostGunByFiringMode(userId, FiringMode);
 
             if (guns == null || !guns.Any())
             {

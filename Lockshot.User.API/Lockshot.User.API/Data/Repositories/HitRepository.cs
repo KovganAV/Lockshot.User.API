@@ -39,10 +39,24 @@ namespace Lockshot.User.API.Data.Repositories
             return await query.ToListAsync();
         }
 
-        public async Task<IEnumerable<Hit>> GetHits(int userId, double distance)
+        public async Task<IEnumerable<Hit>> GetHitsByDistance(int userId, double distance)
         {
             return await _context.Hits
                 .Where(hit => hit.UserId == userId && hit.Distance == distance)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Hit>> GetHitsByMetrics(int userId, double Metrics)
+        {
+            return await _context.Hits
+                .Where(hit => hit.UserId == userId && hit.Metrics == Metrics)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Hit>> GetHitsByScore(int userId, int Score)
+        {
+            return await _context.Hits
+                .Where(hit => hit.UserId == userId && hit.Score == Score)
                 .ToListAsync();
         }
 
