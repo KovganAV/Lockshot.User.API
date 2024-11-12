@@ -14,7 +14,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IHitRepository, HitRepository>();
 builder.Services.AddScoped<IHitService, HitService>();
-
+builder.Services.AddScoped<IGunService, GunService>();
+builder.Services.AddScoped<IGunRepository, GunRepository>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
