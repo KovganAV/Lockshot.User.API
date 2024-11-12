@@ -5,7 +5,7 @@ namespace Lockshot.User.API.Core.Interfaces
 {
     public interface IGunService
     {
-        Task<IEnumerable<Gun>> GetAllGunsAsync(int userId);
+        Task<IEnumerable<Gun>> GetAllGunsAsync(int UserId);
         Task<IEnumerable<Gun>> GetMostGunByCalibre(int userId, string Calibre);
         Task<IEnumerable<Gun>> GetMostGunByNameGun(int userId, string NameGun);
         Task<IEnumerable<Gun>> GetMostGunById(int userId, int Id);

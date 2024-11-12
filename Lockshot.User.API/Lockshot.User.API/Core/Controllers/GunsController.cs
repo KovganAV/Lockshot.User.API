@@ -17,9 +17,9 @@ namespace Lockshot.User.API.Core.Controllers
             _gunService = gunService;
         }
         [HttpGet("{userId}/all")]
-        public async Task<IActionResult> GetAllGunsAsync(int userId)
+        public async Task<IActionResult> GetAllGunsAsync(int UserId)
         {
-            var guns = await _gunService.GetAllGunsAsync(userId);
+            var guns = await _gunService.GetAllGunsAsync(UserId);
 
             if (guns == null || !guns.Any())
             {
