@@ -19,9 +19,9 @@ namespace Lockshot.User.API.Core.Services
             _gunRepository = gunRepository;
         }
 
-        public async Task<IEnumerable<Gun>> GetAllGunsAsync(int userId)
+        public async Task<IEnumerable<Gun>> GetAllGunsAsync(int UserId)
         {
-            return await _gunRepository.GetAllGunsAsync(userId);
+            return await _gunRepository.GetAllGunsAsync(UserId);
         }
 
         public async Task<IEnumerable<Gun>> GetMostGunByCalibre(int userId, string Calibre)

@@ -9,7 +9,7 @@ namespace Lockshot.User.API.Core.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
-  
+
         public UsersController(IUserService userService)
         {
             _userService = userService;
@@ -22,7 +22,7 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(users);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("id/{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
             var user = await _userService.GetUserByIdAsync(id);
@@ -33,10 +33,10 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(user);
         }
 
-        [HttpGet("{name}")]
-        public async Task<IActionResult> GetUserByName(string Name) 
+        [HttpGet("name/{name}")]
+        public async Task<IActionResult> GetUserByName(string name)
         {
-            var user = await _userService.GetUserByNameAsync(Name);
+            var user = await _userService.GetUserByNameAsync(name);
             if (user == null)
             {
                 return NotFound("User not found.");
@@ -44,16 +44,15 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(user);
         }
 
-
-        [HttpGet("{email}")]
-        public async Task<IActionResult> GetUserByEmailAsync(string Email)
+        [HttpGet("email/{email}")]
+        public async Task<IActionResult> GetUserByEmailAsync(string email)
         {
-            var email = await _userService.GetUserByEmailAsync(Email);
-            if (email == null)
+            var user = await _userService.GetUserByEmailAsync(email);
+            if (user == null)
             {
                 return NotFound("User not found.");
             }
-            return Ok(email);
+            return Ok(user);
         }
 
         [HttpPost]
