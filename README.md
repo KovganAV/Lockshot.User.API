@@ -67,7 +67,7 @@ The application employs a microservices architecture, including:
 ## Setup and Deployment
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo-name/lockshot.git
+   git clone https://github.com/KovganAV/Lockshot.User.API
    cd lockshot
    ```
 
