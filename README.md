@@ -1,86 +1,83 @@
-Приложение Lockshot
-Lockshot — это комплексное приложение, разработанное для любителей спортивной стрельбы. Оно предоставляет функции для отслеживания прогресса тренировок, взаимодействия с сообществом единомышленников и использования идей, полученных с помощью искусственного интеллекта, для улучшения ваших навыков.
+Lockshot Application
+Lockshot is a comprehensive application designed for shooting sports enthusiasts. It provides features for tracking training progress, engaging with a community of like-minded individuals, and leveraging AI-driven insights to improve your skills.
 
-Функции
-Веб- и мобильные платформы
-Приложение доступно в виде веб-приложения и мобильного приложения (для Android), созданного с использованием:
+Features
+Web and Mobile Platforms
+The application is available as a web app and a mobile app (for Android) built using:
 
-Веб-фронтенд : React.js
-Мобильный фронтенд : React Native
-Основная функциональность
-Трекер стрелковой подготовки
+Web Frontend: React.js
+Mobile Frontend: React Native
+Core Functionality
+Shooting Training Tracker
 
-Записывайте свои попадания.
-Анализируйте и отслеживайте статистику обращений.
-Взаимодействие с сообществом
+Log your shooting hits.
+Analyze and track hit statistics.
+Community Interaction
 
-Общайтесь с другими спортсменами через чат-систему в реальном времени, работающую на базе SignalR.
-Обсуждайте стратегии, методы и делитесь опытом.
-Образовательные ресурсы
+Chat with other athletes via a real-time chat system powered by SignalR.
+Discuss strategies, techniques, and share experiences.
+Educational Resources
 
-Посмотрите видеоролики, чтобы узнать о приемах спортивной стрельбы.
-Будьте в курсе последних новостей в мире стрелкового спорта.
-Помощник ИИ
+Access videos to learn about shooting sports techniques.
+Stay updated with the latest news in the shooting sports world.
+AI Assistant
 
-Получайте персонализированные советы и рекомендации по тренировкам от помощника на основе искусственного интеллекта.
-Архитектура бэкэнда
-Бэкэнд реализован с использованием .NET Core со следующими компонентами:
+Get personalized training tips and advice powered by an AI assistant.
+Backend Architecture
+The backend is implemented using .NET Core with the following components:
 
-Система обмена сообщениями : SignalR для общения в реальном времени.
-Хранилище данных : PostgreSQL в качестве базы данных.
-Веб-API : RESTful-сервисы для всех функций.
-Интеграция ИИ : использует современные фреймворки ИИ для поддержки помощника.
-Redis : Для кэширования.
-Бэкэнд-микросервисы
-Приложение использует архитектуру микросервисов, включающую:
+Messaging System: SignalR for real-time communication.
+Data Storage: PostgreSQL as the database.
+Web API: RESTful services for all features.
+AI Integration: Leverages modern AI frameworks to power the assistant.
+Redis: For caching.
+Backend Microservices
+The application employs a microservices architecture, including:
 
 Lockshot.User.API
 Lockshot.Channels.API
 Lockshot.Client.Web.API
 Lockshot.Bot.API
-Технологии
-Внешний интерфейс
-React.js и React Native (с Redux и React Router).
-Бэкэнд
+Technologies
+Frontend
+React.js and React Native (with Redux and React Router).
+Backend
 .NET Core
-Ядро Entity Framework
-SignalR для функций в реальном времени.
-Redis для кэширования.
-PostgreSQL для хранения данных.
-Docker для контейнерных развертываний.
-Настройка и развертывание
-Клонируйте репозиторий:
+Entity Framework Core
+SignalR for real-time features.
+Redis for caching.
+PostgreSQL for data storage.
+Docker for containerized deployments.
+Setup and Deployment
+Clone the repository:
 
-Баш
-
-Скопировать код
+bash
+Copy code
 git clone https://github.com/your-repo-name/lockshot.git
 cd lockshot
-Настройте бэкэнд:
+Set up the backend:
 
-Перейдите к каталогам внутренних служб и создайте их с помощью dotnet build.
-Запускайте службы с помощью docker-composeдля бесперебойного развертывания.
-Настройте интерфейс:
+Navigate to the backend service directories and build them using dotnet build.
+Run the services with docker-compose for seamless deployment.
+Set up the frontend:
 
-Перейдите в каталоги frontendи mobile.
-Установить зависимости:
-Баш
-
-Скопировать код
+Navigate to the frontend and mobile directories.
+Install dependencies:
+bash
+Copy code
 npm install
-Запустите сервер разработки:
-Баш
-
-Скопировать код
+Start the development server:
+bash
+Copy code
 npm start
-Настройте переменные среды для API, подключений к базам данных и интеграции ИИ.
+Configure environment variables for APIs, database connections, and AI integrations.
 
-Будущие улучшения
-Добавьте больше информации на основе искусственного интеллекта.
-Расширьте возможности сообщества с помощью групповых форумов.
-Оптимизируйте мобильное приложение для кроссплатформенной поддержки (iOS).
-Лицензия
-Данный проект лицензирован по лицензии MIT.
+Future Enhancements
+Add more AI-driven insights.
+Expand community features with group forums.
+Optimize the mobile app for cross-platform support (iOS).
+License
+This project is licensed under the MIT License.
 
-Вклады
-Вклады приветствуются! Пожалуйста, откройте запрос на включение или сообщите о проблемах для обсуждения.
+Contributions
+Contributions are welcome! Please open a pull request or report issues for discussion.
