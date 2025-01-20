@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Lockshot.User.API",
+    "\\Lockshot.User.API\\Lockshot.User.API",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Core",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Core\\Controllers",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Core\\Services",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Data"
+  ],
+  "SelectedNode": "\\Lockshot.User.API\\Lockshot.User.API.sln",
+  "PreviewInSolutionExplorer": false
+}
