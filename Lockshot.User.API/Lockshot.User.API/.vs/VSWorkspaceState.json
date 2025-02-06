@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Lockshot.User.API",
+    "\\Lockshot.User.API\\Lockshot.User.API",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Class",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Core",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Core\\Controllers",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Core\\Interfaces",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Core\\Services",
+    "\\Lockshot.User.API\\Lockshot.User.API\\Migrations"
+  ],
+  "SelectedNode": "\\Lockshot.User.API\\Lockshot.User.API\\Core\\Services\\UserService.cs",
+  "PreviewInSolutionExplorer": false
+}
