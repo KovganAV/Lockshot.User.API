@@ -1,5 +1,6 @@
 ﻿using Lockshot.User.API.Class;
 using Lockshot.User.API.Core.DTOs;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -13,5 +14,7 @@ namespace Lockshot.User.API.Core.Interfaces
         Task<IEnumerable<HitDto>> GetMostHitsByScore(int userId, int Score);
         Task<IEnumerable<HitDto>> GetHitsByWeaponType(int userId, string WeaponType);
         Task<IEnumerable<HitDto>> GetAllHits(int userId);
+        Task<object> GetUserHitStatisticsAsync(int userId);
+        Task<string> ValidateTokenAndGetUserId(string token);
     }
 }

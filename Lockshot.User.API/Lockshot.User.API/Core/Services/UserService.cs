@@ -13,11 +13,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
+using Lockshot.User.API.Data.Interfaces;
 
 namespace Lockshot.User.API.Core.Services
 {
     public class UserService : IUserService
     {
+
         private readonly IUserRepository _userRepository;
         private readonly string _secretKey;
         private readonly string _issuer;
@@ -189,5 +191,6 @@ namespace Lockshot.User.API.Core.Services
                 return null;
             }
         }
+
     }
 }

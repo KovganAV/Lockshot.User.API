@@ -12,7 +12,6 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Настройка Cloudinary
 var cloudinarySettings = builder.Configuration.GetSection("Cloudinary").Get<CloudinarySettings>();
 builder.Services.AddSingleton(new Cloudinary(new Account(
     cloudinarySettings.CloudName,
@@ -20,11 +19,9 @@ builder.Services.AddSingleton(new Cloudinary(new Account(
     cloudinarySettings.ApiSecret
 )));
 
-// Настройка базы данных
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Регистрация зависимостей
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IHitRepository, HitRepository>();
@@ -32,7 +29,6 @@ builder.Services.AddScoped<IHitService, HitService>();
 builder.Services.AddScoped<IGunService, GunService>();
 builder.Services.AddScoped<IGunRepository, GunRepository>();
 
-// Настройка аутентификации JWT
 var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -52,7 +48,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Настройка CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("TestSitePolicy", policy =>
@@ -79,64 +74,3 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
-
-
-//using Lockshot.User.API.Core.Interfaces;
-//using Lockshot.User.API.Core.Services;
-//using Lockshot.User.API.Data;
-//using Lockshot.User.API.Data.Interfaces;
-//using Lockshot.User.API.Data.Repositories;
-//using Microsoft.EntityFrameworkCore;
-//using CloudinaryDotNet;
-//using Lockshot.User.API.Class;
-
-//var builder = WebApplication.CreateBuilder(args);
-
-//var cloudinarySettings = builder.Configuration.GetSection("Cloudinary").Get<CloudinarySettings>();
-//builder.Services.AddSingleton(new Cloudinary(new Account(
-//    cloudinarySettings.CloudName,
-//    cloudinarySettings.ApiKey,
-//    cloudinarySettings.ApiSecret
-//)));
-
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-//builder.Services.AddScoped<IUserRepository, UserRepository>();
-//builder.Services.AddScoped<IUserService, UserService>();
-//builder.Services.AddScoped<IHitRepository, HitRepository>();
-//builder.Services.AddScoped<IHitService, HitService>();
-//builder.Services.AddScoped<IGunService, GunService>();
-//builder.Services.AddScoped<IGunRepository, GunRepository>();
-
-//builder.Services.AddControllers();
-//builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
-
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("TestSitePolicy", policy =>
-//    {
-//        policy.WithOrigins("http://localhost:5173")
-//              .AllowAnyHeader()
-//              .AllowAnyMethod();
-//    });
-//});
-
-//var app = builder.Build();
-
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger();
-//    app.UseSwaggerUI();
-//    app.UseDeveloperExceptionPage();
-//}
-
-
-//app.UseCors("TestSitePolicy");
-
-//app.UseHttpsRedirection();
-//app.UseAuthorization();
-//app.MapControllers();
-//app.Run();
-

@@ -97,9 +97,16 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok("Фото успешно сохранено.");
         }
 
-        [HttpGet("profile/{token}")]  // перенеси это в веб апи 
-        public async Task<IActionResult> GetUserProfile(string token)
+        [HttpGet("profile")]
+        public async Task<IActionResult> GetUserProfile()
         {
+            var authorizationHeader = Request.Headers["Authorization"].ToString();
+            if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+            {
+                return Unauthorized("Authorization header missing or invalid.");
+            }
+
+            var token = authorizationHeader.Substring("Bearer ".Length).Trim();
             var userIdClaim = await _userService.ValidateTokenAndGetUserId(token);
             if (string.IsNullOrEmpty(userIdClaim))
             {
@@ -120,16 +127,18 @@ namespace Lockshot.User.API.Core.Controllers
             return Ok(user);
         }
 
-        //[HttpGet("{userId}/photo-url")]
-        //public async Task<IActionResult> GetPhotoUrl(int userId)
-        //{
-        //    var user = await _context.Users.FindAsync(userId);
-        //    if (user == null || string.IsNullOrEmpty(user.PhotoUrl))
-        //    {
-        //        return NotFound("Фото не найдено.");
-        //    }
-
-        //    return Ok(new { PhotoUrl = user.PhotoUrl });
-        //}
     }
+
+    //[HttpGet("{userId}/photo-url")]
+    //public async Task<IActionResult> GetPhotoUrl(int userId)
+    //{
+    //    var user = await _context.Users.FindAsync(userId);
+    //    if (user == null || string.IsNullOrEmpty(user.PhotoUrl))
+    //    {
+    //        return NotFound("Фото не найдено.");
+    //    }
+
+    //    return Ok(new { PhotoUrl = user.PhotoUrl });
+    //}
 }
+

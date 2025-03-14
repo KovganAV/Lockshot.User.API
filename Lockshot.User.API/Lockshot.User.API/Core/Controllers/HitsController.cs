@@ -1,5 +1,6 @@
 ﻿using Lockshot.User.API.Core.DTOs;
 using Lockshot.User.API.Core.Interfaces;
+using Lockshot.User.API.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lockshot.User.API.Core.Controllers
@@ -87,6 +88,100 @@ namespace Lockshot.User.API.Core.Controllers
             }
 
             return Ok(hits);
+        }
+
+        [HttpGet("statistics")]
+        public async Task<IActionResult> GetUserHitStatisticsAsync()
+        {
+            var authorizationHeader = Request.Headers["Authorization"].ToString();
+            if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+            {
+                return Unauthorized("Authorization header missing or invalid.");
+            }
+
+            var token = authorizationHeader.Substring("Bearer ".Length).Trim();
+            var userIdClaim = await _hitService.ValidateTokenAndGetUserId(token);
+            if (string.IsNullOrEmpty(userIdClaim))
+            {
+                return Unauthorized("Invalid token.");
+            }
+
+            if (!int.TryParse(userIdClaim, out var userId))
+            {
+                return BadRequest("Invalid user ID format.");
+            }
+
+            var statistics = await _hitService.GetUserHitStatisticsAsync(userId);
+            return Ok(statistics);
+        }
+
+        [HttpGet("allHits")]
+        public async Task<IActionResult> GetAllHit()
+        {
+            var authorizationHeader = Request.Headers["Authorization"].ToString();
+            if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+            {
+                return Unauthorized("Authorization header missing or invalid.");
+            }
+
+            var token = authorizationHeader.Substring("Bearer ".Length).Trim();
+            var userIdClaim = await _hitService.ValidateTokenAndGetUserId(token);
+            if (string.IsNullOrEmpty(userIdClaim))
+            {
+                return Unauthorized("Invalid token.");
+            }
+
+            if (!int.TryParse(userIdClaim, out var userId))
+            {
+                return BadRequest("Invalid user ID format.");
+            }
+
+            var hits = await _hitService.GetAllHits(userId);
+
+            if (hits == null || !hits.Any())
+            {
+                return NotFound("No hits found for the specified user and distance.");
+            }
+
+            return Ok(hits);
+        }
+
+        [HttpGet("hits")]
+        public async Task<IActionResult> GetHits()
+        {
+            try
+            {
+                var authorizationHeader = Request.Headers["Authorization"].ToString();
+                if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+                {
+                    return Unauthorized("Authorization header missing or invalid.");
+                }
+
+                var token = authorizationHeader.Substring("Bearer ".Length).Trim();
+                var userIdClaim = await _hitService.ValidateTokenAndGetUserId(token);
+                if (string.IsNullOrEmpty(userIdClaim))
+                {
+                    return Unauthorized("Invalid token.");
+                }
+
+                if (!int.TryParse(userIdClaim, out var userId))
+                {
+                    return BadRequest("Invalid user ID format.");
+                }
+
+                var hits = await _hitService.GetAllHits(userId);
+
+                if (hits == null || !hits.Any())
+                {
+                    return NotFound("No hits found for the specified user.");
+                }
+
+                return Ok(hits); 
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Server error: {ex.Message}");
+            }
         }
     }
 }
